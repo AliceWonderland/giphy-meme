@@ -13,7 +13,7 @@ class Counter extends Component {
   };
 
   render() {
-    console.log('props',this.props);
+    console.log('props counter',this.props);
     const { increment, incrementIfOdd, incrementAsync, decrement, counter } = this.props;
     return (
       <div>

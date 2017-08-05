@@ -11,9 +11,10 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  dispatch(GiphyActions.fetchGifs());
+  // dispatch(GiphyActions.fetchGifs());
 
-  // return bindActionCreators(GiphyActions, dispatch);
+
+  return bindActionCreators(GiphyActions, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Giphy);

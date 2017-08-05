@@ -7,6 +7,7 @@ import styles from './Giphy.css';
 export default class Giphy extends Component {
   constructor(props){
     super(props);
+    console.log('props from dispatch',props);
     this.state = {
       gifs:[]
     };
@@ -14,12 +15,18 @@ export default class Giphy extends Component {
 
   componentDidMount () {
 
+    // console.log('props.gifs in mount',this.props.gifs);
+    // this.setState({gifs:this.props.gifs.data});
+    this.props.fetchGifs();
+
+    console.log('props in mount',this.props);
   }
 
   render() {
 
-    console.log('props from giphypage',this.props.gifs.data);
-    const result=this.props.gifs.data;
+    console.log('props in render',this.props.gifs, 'state');
+    const result=this.props.gifs;
+
     return (
       <div>
         <div className={styles.backButton} data-tid="backButton">

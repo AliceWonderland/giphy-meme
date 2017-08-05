@@ -25,7 +25,8 @@ export function fetchGifs () {
     return axios.get('https://api.giphy.com/v1/gifs/search?api_key=f4ee250fb7fc4ccf88cc2260099165c8&q=puppy&limit=25&offset=0&rating=G&lang=en')
       .then(res => res.data)
       .then(gifs => {
-        const action = getGifs(gifs);
+        console.log('THUNK',gifs);
+        const action = getGifs(gifs.data);
         dispatch(action);
       });
   }
