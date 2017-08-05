@@ -17,11 +17,7 @@ export default function giphy(state:gifs=[], action: actionType) {
   console.log('state', state, action);
   switch (action.type) {
     case GET_GIFS:
-      return action.gifs
-      // return {
-      //   ...state,
-      //   gifs: [...state, action.gifs]
-      // };
+      return action.gifs;
     default:
       return state;
   }

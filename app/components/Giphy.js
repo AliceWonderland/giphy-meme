@@ -18,8 +18,8 @@ export default class Giphy extends Component {
 
   render() {
 
-    console.log('props from giphypage',this.props);
-    const result=this.state.gifs;
+    console.log('props from giphypage',this.props.gifs.data);
+    const result=this.props.gifs.data;
     return (
       <div>
         <div className={styles.backButton} data-tid="backButton">
