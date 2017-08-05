@@ -4,7 +4,7 @@ import { Switch, Route } from 'react-router';
 import App from './containers/App';
 import HomePage from './containers/HomePage';
 import CounterPage from './containers/CounterPage';
-import Giphy from './components/giphy';
+import GiphyPage from './containers/GiphyPage';
 import Meme from './components/Meme';
 
 export default () => (

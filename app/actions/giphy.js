@@ -1,8 +1,9 @@
 // @flow
 import type { gifsStateType } from '../reducers/giphy';
+import axios from 'axios';
 
 type actionType = {
-  +type: string
+  +type: Array<{}>
 };
 
 
@@ -12,6 +13,7 @@ export const GET_GIFS = 'GET_GIFS';
 
 // ACTION CREATOR
 export function getGifs (gifs) {
+  console.log('gifs from thunk',gifs)
   const action = { type: GET_GIFS, gifs };
   return action;
 }

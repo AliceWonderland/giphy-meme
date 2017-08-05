@@ -2,7 +2,7 @@
 import { GET_GIFS } from '../actions/giphy';
 
 export type gifsStateType = {
-  +gifs: Array<{}>
+  +gifs: Array<>
 };
 
 type actionType = {
@@ -13,13 +13,15 @@ const initialState={
     gifs: []
 };
 
-export default function gifs(state: gifs = [], action: actionType) {
+export default function giphy(state:gifs=[], action: actionType) {
+  console.log('state', state, action);
   switch (action.type) {
     case GET_GIFS:
-      return {
-        ...state,
-        gifs: [...state.gifs, action.gifs]
-      };
+      return action.gifs
+      // return {
+      //   ...state,
+      //   gifs: [...state, action.gifs]
+      // };
     default:
       return state;
   }

@@ -13,20 +13,13 @@ export default class Giphy extends Component {
   }
 
   componentDidMount () {
-    axios.get('https://api.giphy.com/v1/gifs/search?api_key=f4ee250fb7fc4ccf88cc2260099165c8&q=puppy&limit=25&offset=0&rating=G&lang=en')
-      .then(res => res.data)
-      .then(gifs => {
-        gifs=gifs.data;
-        // console.log('mount',gifs);
-        this.setState({ gifs });
-      });
+
   }
 
-
   render() {
+
+    console.log('props from giphypage',this.props);
     const result=this.state.gifs;
-    // console.log('giffys',result[0]);
-    console.log('props',this.props);
     return (
       <div>
         <div className={styles.backButton} data-tid="backButton">

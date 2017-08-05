@@ -7,11 +7,11 @@ import rootReducer from '../reducers';
 import * as counterActions from '../actions/counter';
 import type { counterStateType } from '../reducers/counter';
 import * as giphyActions from '../actions/giphy';
-import type { giphyStateType } from '../reducers/giphy';
+import type { gifsStateType } from '../reducers/giphy';
 
 const history = createHashHistory();
 
-const configureStore = (initialState?: counterStateType) => {
+const configureStore = (initialState?: gifsStateType) => {
   // Redux Configuration
   const middleware = [];
   const enhancers = [];
@@ -33,6 +33,7 @@ const configureStore = (initialState?: counterStateType) => {
   // Redux DevTools Configuration
   const actionCreators = {
     ...counterActions,
+    ...giphyActions,
     ...routerActions,
   };
   // If Redux DevTools Extension is installed use it, otherwise use Redux compose

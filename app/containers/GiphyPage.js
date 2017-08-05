@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Giphy from '../components/giphy';
 import * as GiphyActions from '../actions/giphy';
 
+
 function mapStateToProps(state) {
   return {
     gifs: state.gifs
@@ -10,7 +11,9 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(GiphyActions, dispatch);
+  dispatch(GiphyActions.fetchGifs());
+
+  // return bindActionCreators(GiphyActions, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Giphy);
