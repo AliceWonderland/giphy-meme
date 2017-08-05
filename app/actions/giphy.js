@@ -1,5 +1,5 @@
 // @flow
-import type { counterStateType } from '../reducers/giphy';
+import type { gifsStateType } from '../reducers/giphy';
 
 type actionType = {
   +type: string

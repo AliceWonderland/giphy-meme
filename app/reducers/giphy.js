@@ -1,8 +1,8 @@
 // @flow
 import { GET_GIFS } from '../actions/giphy';
 
-export type counterStateType = {
-  +counter: number
+export type gifsStateType = {
+  +gifs: Array<{}>
 };
 
 type actionType = {
@@ -13,7 +13,7 @@ const initialState={
     gifs: []
 };
 
-export default function counter(state: gifs = [], action: actionType) {
+export default function gifs(state: gifs = [], action: actionType) {
   switch (action.type) {
     case GET_GIFS:
       return {

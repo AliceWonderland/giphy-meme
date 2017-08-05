@@ -6,6 +6,8 @@ import { createLogger } from 'redux-logger';
 import rootReducer from '../reducers';
 import * as counterActions from '../actions/counter';
 import type { counterStateType } from '../reducers/counter';
+import * as giphyActions from '../actions/giphy';
+import type { giphyStateType } from '../reducers/giphy';
 
 const history = createHashHistory();
 

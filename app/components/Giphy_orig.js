@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import styles from './Giphy.css';
 
-export default class Meme extends Component {
-  constructor(){
-    super();
+export default class Giphy extends Component {
+  constructor(props){
+    super(props);
     this.state = {
       gifs:[]
     };
@@ -14,17 +14,19 @@ export default class Meme extends Component {
 
   componentDidMount () {
     axios.get('https://api.giphy.com/v1/gifs/search?api_key=f4ee250fb7fc4ccf88cc2260099165c8&q=puppy&limit=25&offset=0&rating=G&lang=en')
-      .then(res => res.data)
-      .then(gifs => {
+    .then(res => res.data)
+    .then(gifs => {
         gifs=gifs.data;
-        console.log('mount',gifs);
+        // console.log('mount',gifs);
         this.setState({ gifs });
-      });
+    });
   }
 
+
   render() {
-    const result=[this.state.gifs[0]];
-    console.log('giffys',result);
+    const result=this.state.gifs;
+    // console.log('giffys',result[0]);
+    console.log('props',this.props);
     return (
       <div>
         <div className={styles.backButton} data-tid="backButton">
@@ -34,16 +36,22 @@ export default class Meme extends Component {
         </div>
         <h2>GIPHY</h2>
         <div className={styles.flex} data-tid="container">
+
+
           {
             result.map(gif => {
               return (
 
 
-                <div key={gif.id}><Link to="/meme"><img src={gif.images.original.url} /></Link></div>
+                  <div key={gif.id}><Link to="/meme"><img src={gif.images.downsized.url} /></Link></div>
+
+
 
               );
             })
           }
+
+
         </div>
       </div>
     );
