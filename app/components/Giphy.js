@@ -33,13 +33,15 @@ export default class Giphy extends Component {
 
     return (
       <div className="container">
+        <div className="row">&nbsp;</div>
+
         <div className={styles.backButton} data-tid="backButton">
           <Link to="/">
             <i className="fa fa-arrow-left fa-3x" />
           </Link>
         </div>
 
-        <h2>GIPHY</h2>
+        <h1>GIPHY Meme Generator</h1>
 
 
         <div className="row">
@@ -53,6 +55,7 @@ export default class Giphy extends Component {
           </div>
         </div>
 
+        <div className="row">&nbsp;</div>
 
         <div className={styles.flex} data-tid="container">
           {

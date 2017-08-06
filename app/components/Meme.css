@@ -11,7 +11,14 @@ input {
 
 .memediv{
   text-align:center;
+  border:1px solid white;
+  padding:20px;
 }
 .memecanvas {
   display: block;
 }
+.memetext{
+  position:relative;
+  top:-30px;
+}
+

@@ -29,6 +29,7 @@
   max-height: 500px;
   border: 1px solid #fff;
   font: 14px Arial;
+  padding:20px;
 
   /* flexbox setup */
   display: flex;
@@ -43,13 +44,17 @@
 
 .flex > div {
   /*flex: 2 2 auto;*/
-  width: 225px; /* To make the transition work nicely. (Transitions to/from
+  width: auto; /* To make the transition work nicely. (Transitions to/from
                         "width:auto" are buggy in Gecko and Webkit, at least.
                         See http://bugzil.la/731886 for more info.) */
   /*height:200px;*/
   /*transition: width 0.7s ease-out;*/
   overflow:hidden;
 
+}
+
+.flex img{
+  margin:10px;
 }
 
 /* colors */
