@@ -10,11 +10,12 @@ type actionType = {
 };
 
 const initialState={
-    gifs: []
+    gifs: [],
+    blob:{}
 };
 
 export default function giphy(state:gifs=[], action: actionType) {
-  console.log('state', state, action.gifs);
+  // console.log('state', state, action.gifs);
   switch (action.type) {
     case GET_GIFS:
       return action.gifs;

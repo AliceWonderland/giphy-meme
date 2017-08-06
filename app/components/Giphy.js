@@ -7,24 +7,28 @@ import styles from './Giphy.css';
 export default class Giphy extends Component {
   constructor(props){
     super(props);
-    console.log('props from dispatch',props);
     this.state = {
       gifs:[]
     };
+    this.handleClick=this.handleClick.bind(this);
   }
 
   componentDidMount () {
-
     // console.log('props.gifs in mount',this.props.gifs);
     // this.setState({gifs:this.props.gifs.data});
     this.props.fetchGifs();
 
-    console.log('props in mount',this.props);
   }
+
+  handleClick(){
+    // console.log('clicked');
+    this.props.selectGif('tee');
+  }
+
 
   render() {
 
-    console.log('props in render',this.props.gifs, 'state');
+    console.log('props in render',this.props);
     const result=this.props.gifs;
 
     return (
@@ -37,13 +41,12 @@ export default class Giphy extends Component {
         <h2>GIPHY</h2>
         <div className={styles.flex} data-tid="container">
 
-
           {
-            result.map(gif => {
+            result.map((gif,ind) => {
               return (
 
 
-                <div key={gif.id}><Link to="/meme"><img src={gif.images.downsized.url} /></Link></div>
+                <div key={gif.id}><Link to={`/meme/${ind}`}><img src={gif.images.downsized.url} /></Link></div>
 
 
 

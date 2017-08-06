@@ -5,14 +5,14 @@ import App from './containers/App';
 import HomePage from './containers/HomePage';
 import CounterPage from './containers/CounterPage';
 import GiphyPage from './containers/GiphyPage';
-import Meme from './components/Meme';
+import MemePage from './containers/MemePage';
 
 export default () => (
   <App>
     <Switch>
       <Route path="/counter" component={CounterPage} />
       <Route path="/giphy" component={GiphyPage} />
-      <Route path="/meme" component={Meme} />
+      <Route path="/meme/:memeId" component={MemePage} />
       <Route path="/" component={HomePage} />
     </Switch>
   </App>
