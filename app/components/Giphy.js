@@ -28,33 +28,42 @@ export default class Giphy extends Component {
 
   render() {
 
-    console.log('props in render',this.props);
+    // console.log('props in render',this.props);
     const result=this.props.gifs;
 
     return (
-      <div>
+      <div className="container">
         <div className={styles.backButton} data-tid="backButton">
           <Link to="/">
             <i className="fa fa-arrow-left fa-3x" />
           </Link>
         </div>
-        <h2>GIPHY</h2>
-        <div className={styles.flex} data-tid="container">
 
+        <h2>GIPHY</h2>
+
+
+        <div className="row">
+          <div className="col-md-4">
+            <div className="input-group">
+              <input type="text" className="form-control" placeholder="Search for... Puppies" />
+              <span className="input-group-btn">
+              <button className="btn btn-default" type="button">Go!</button>
+            </span>
+            </div>
+          </div>
+        </div>
+
+
+        <div className={styles.flex} data-tid="container">
           {
             result.map((gif,ind) => {
               return (
 
-
-                <div key={gif.id}><Link to={`/meme/${ind}`}><img src={gif.images.downsized.url} /></Link></div>
-
-
+                <div key={gif.id}><Link to={`/meme/${ind}`}><img src={gif.images.original.url} /></Link></div>
 
               );
             })
           }
-
-
         </div>
       </div>
     );

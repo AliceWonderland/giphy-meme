@@ -8,7 +8,7 @@ export default class Home extends Component {
     return (
       <div>
         <div className={styles.container} data-tid="container">
-          <h2>Home</h2>
+          <h2>GIPHY Meme Generator</h2>
           <ul>
             <li><Link to="/counter">to Counter</Link></li>
             <li><Link to="/giphy">to giphy</Link></li>

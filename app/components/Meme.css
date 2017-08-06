@@ -1,0 +1,17 @@
+
+
+/*img {*/
+  /*left: -10000px;*/
+  /*top: -10000px;*/
+  /*position: absolute;*/
+/*}*/
+input {
+  display: block;
+}
+
+.memediv{
+  text-align:center;
+}
+.memecanvas {
+  display: block;
+}

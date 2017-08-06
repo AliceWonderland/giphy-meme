@@ -36,16 +36,20 @@
   flex-wrap:wrap;
 
   overflow:scroll;
+
+  align-items: space-around;
+  justify-content:space-evenly;
 }
 
 .flex > div {
-  flex: 2 2 auto;
-  width: 200px; /* To make the transition work nicely. (Transitions to/from
+  /*flex: 2 2 auto;*/
+  width: 225px; /* To make the transition work nicely. (Transitions to/from
                         "width:auto" are buggy in Gecko and Webkit, at least.
                         See http://bugzil.la/731886 for more info.) */
   /*height:200px;*/
-  transition: width 0.7s ease-out;
+  /*transition: width 0.7s ease-out;*/
   overflow:hidden;
+
 }
 
 /* colors */
@@ -53,9 +57,9 @@
 /*.flex > div:nth-child(2){ background: #F1F2F1; }*/
 /*.flex > div:nth-child(3){ background: #CE2B37; }*/
 
-.flex > div:hover {
-  width: 200px;
-}
+/*.flex > div:hover {*/
+  /*width: 200px;*/
+/*}*/
 
 .container h2 {
   font-size: 5rem;
