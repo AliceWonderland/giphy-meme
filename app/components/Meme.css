@@ -33,4 +33,7 @@ input {
 .ahover{
   opacity:1;
 }
+.hideme{
+  visibility:hidden;
+}
 

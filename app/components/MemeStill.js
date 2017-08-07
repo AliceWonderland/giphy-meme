@@ -16,11 +16,13 @@ export default class Meme extends Component {
       memeInputX:0,
       memeInputY:0,
       memeInput2X:0,
-      memeInput2Y:0
+      memeInput2Y:0,
+      filename:''
     };
     this.handleChange=this.handleChange.bind(this);
     this.handleChangeBottom=this.handleChangeBottom.bind(this);
     this.drawMeme=this.drawMeme.bind(this);
+    this.handleClick=this.handleClick.bind(this);
   }
 
   componentDidMount () {
@@ -47,6 +49,11 @@ export default class Meme extends Component {
     ctx.fillStyle=gradient;
     ctx.fillText(this.state.memeInput2,10,90);
 
+    var dataURL = c.toDataURL();
+    this.setState({filename:dataURL});
+
+
+
   }
 
 
@@ -61,6 +68,17 @@ export default class Meme extends Component {
     // console.log(event.target.value);
     this.setState({memeInput2: event.target.value.toUpperCase()});
     this.drawMeme();
+  }
+
+  handleClick(event){
+    console.log('clicked',event);
+
+  }
+
+
+  downloadCanvas(link, canvasId, filename) {
+    link.href = document.getElementById(canvasId).toDataURL();
+    link.download = filename;
   }
 
 
@@ -90,18 +108,6 @@ export default class Meme extends Component {
             Your browser does not support the HTML5 canvas tag.
           </canvas>
 
-          {/*<p><button onClick={this.drawMeme}>Try it</button></p>*/}
-
-
-
-
-          <div className={styles.memetext}>{this.state.memeInput}</div>
-          <div className="row text-center">
-            <a href="#" download={result.images.downsized_large.url}><img id="start-image" src={result.images.downsized_large.url} alt="" /></a>
-          </div>
-          <div className={styles.memetext2}>{this.state.memeInput2}</div>
-
-
           <div className="row">
             <div className="col-md-6 col-md-offset-3">
               <input type="text" className="form-control" placeholder={this.state.memeInput} value={this.state.memeInput} onChange={this.handleChange} />
@@ -110,11 +116,12 @@ export default class Meme extends Component {
               <input type="text" className="form-control" placeholder={this.state.memeInput2} value={this.state.memeInput2} onChange={this.handleChangeBottom} />
             </div>
           </div>
+          <p><a href={this.state.filename} download='meme.png'><button>Download</button></a></p>
         </div>
 
 
 
-        <img id="memeholder" src={result.images.downsized_large.url} />
+        <div className={styles.hideme}><img id="memeholder" src={result.images.downsized_large.url} /></div>
 
       </div>
     );
