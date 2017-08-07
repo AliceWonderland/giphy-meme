@@ -11,6 +11,7 @@ export default class Giphy extends Component {
       gifs:[]
     };
     this.handleClick=this.handleClick.bind(this);
+    this.handleChange=this.handleChange.bind(this);
   }
 
   componentDidMount () {
@@ -18,6 +19,11 @@ export default class Giphy extends Component {
     // this.setState({gifs:this.props.gifs.data});
     this.props.fetchGifs();
 
+  }
+
+  handleChange(){
+    // console.log('clicked');
+    this.props.selectGif('tee');
   }
 
   handleClick(){
@@ -28,8 +34,17 @@ export default class Giphy extends Component {
 
   render() {
 
-    // console.log('props in render',this.props);
+    console.log('props in render',this.props);
     const result=this.props.gifs;
+    const url=(this.props.location.pathname==='/giphystill')?'memestill':'meme';
+
+  //
+  //   const isLoggedIn = props.isLoggedIn;
+  //   if (isLoggedIn) {
+  //     return <UserGreeting />;
+  //   }
+  //   return <GuestGreeting />;
+  // }
 
     return (
       <div className="container">
@@ -42,6 +57,8 @@ export default class Giphy extends Component {
         </div>
 
         <h1>GIPHY Meme Generator</h1>
+
+
 
 
         <div className="row">
@@ -62,7 +79,7 @@ export default class Giphy extends Component {
             result.map((gif,ind) => {
               return (
 
-                <div key={gif.id}><Link to={`/meme/${ind}`}><img src={gif.images.original.url} /></Link></div>
+                <div key={gif.id}><Link to={`/${url}/${ind}`}><img src={gif.images.original.url} /></Link></div>
 
               );
             })

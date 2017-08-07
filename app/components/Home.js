@@ -12,6 +12,7 @@ export default class Home extends Component {
           <ul>
             {/*<li><Link to="/counter">to Counter</Link></li>*/}
             <li><Link to="/giphy">to giphy</Link></li>
+            <li><Link to="/giphystill">to giphy still</Link></li>
           </ul>
 
 

@@ -6,12 +6,15 @@ import HomePage from './containers/HomePage';
 import CounterPage from './containers/CounterPage';
 import GiphyPage from './containers/GiphyPage';
 import MemePage from './containers/MemePage';
+import MemePageStill from './containers/MemePageStill';
 
 export default () => (
   <App>
     <Switch>
       <Route path="/counter" component={CounterPage} />
       <Route path="/giphy" component={GiphyPage} />
+      <Route path="/giphystill" component={GiphyPage} />
+      <Route path="/memestill/:memeId" component={MemePageStill} />
       <Route path="/meme/:memeId" component={MemePage} />
       <Route path="/" component={HomePage} />
     </Switch>
