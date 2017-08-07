@@ -34,7 +34,7 @@ export default class Giphy extends Component {
 
   render() {
 
-    console.log('props in render',this.props);
+    // console.log('props in render',this.props);
     const result=this.props.gifs;
     const url=(this.props.location.pathname==='/giphystill')?'memestill':'meme';
 

@@ -32,7 +32,7 @@ export default class Meme extends Component {
 
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     const result=this.state.selectedGif;
     return (
       <div className="container">

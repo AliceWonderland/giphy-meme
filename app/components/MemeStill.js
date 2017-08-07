@@ -35,39 +35,35 @@ export default class Meme extends Component {
     var img = document.getElementById("memeholder");
     ctx.drawImage(img, 10, 10);
 
-
     ctx.font="20px Georgia";
     ctx.fillText(this.state.memeInput,10,50);
 
     ctx.font="30px Verdana";
-// Create gradient
+    // Create gradient
     var gradient=ctx.createLinearGradient(0,0,c.width,0);
     gradient.addColorStop("0","magenta");
     gradient.addColorStop("0.5","blue");
     gradient.addColorStop("1.0","red");
-// Fill with gradient
+
+    // Fill with gradient
     ctx.fillStyle=gradient;
     ctx.fillText(this.state.memeInput2,10,90);
 
     var dataURL = c.toDataURL();
     this.setState({filename:dataURL});
 
-
-
   }
 
 
   handleChange(event) {
     // console.log(event.target.value);
-    this.setState({memeInput: event.target.value.toUpperCase()});
-    this.drawMeme();
+    this.setState({memeInput: event.target.value.toUpperCase()},this.drawMeme);
 
   }
 
   handleChangeBottom(event) {
     // console.log(event.target.value);
-    this.setState({memeInput2: event.target.value.toUpperCase()});
-    this.drawMeme();
+    this.setState({memeInput2: event.target.value.toUpperCase()},this.drawMeme);
   }
 
   handleClick(event){
@@ -76,14 +72,9 @@ export default class Meme extends Component {
   }
 
 
-  downloadCanvas(link, canvasId, filename) {
-    link.href = document.getElementById(canvasId).toDataURL();
-    link.download = filename;
-  }
-
 
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     const result=this.state.selectedGif;
     return (
       <div className="container">
@@ -116,7 +107,7 @@ export default class Meme extends Component {
               <input type="text" className="form-control" placeholder={this.state.memeInput2} value={this.state.memeInput2} onChange={this.handleChangeBottom} />
             </div>
           </div>
-          <p><a href={this.state.filename} download='meme.png'><button>Download</button></a></p>
+          <p><a href={this.state.filename} download='meme.png'><button className="btn btn-default">Download</button></a></p>
         </div>
 
 
