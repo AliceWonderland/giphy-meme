@@ -4,8 +4,10 @@ A Desktop App built in React to Create Custom Memes. Search GIPHY for gifs of yo
 
 <br/>
 
-## Demo
-[[embed url=https://www.youtube.com/watch?v=iJyRLpqSOhs]]
+## Screenshot
+[![GiphyMeme](/giphy-meme/blob/master/resources/giphymeme.png)](https://www.youtube.com/watch?v=iJyRLpqSOhs)
+
+Demo [[embed url=https://www.youtube.com/watch?v=iJyRLpqSOhs]]
 
 <!-- ## Screenshot ![Electron Boilerplate Demo](https://cloud.githubusercontent.com/assets/3382565/10557547/b1f07a4e-74e3-11e5-8d27-79ab6947d429.gif) -->
 ## Electron
