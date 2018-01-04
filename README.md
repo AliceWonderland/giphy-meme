@@ -25,16 +25,16 @@ React, Redux, GIPHY APi
 ### Run - To View
 From Command Line Prompt (Terminal or Shell):
 
-* ** git clone https://github.com/AliceWonderland/giphy-meme.git
-* ** Browse to the folder just cloned down `giphy-meme`
-* ** Run `npm install` to install all package dependencies
-* ** Run `npm run dev` to start the app
+* git clone https://github.com/AliceWonderland/giphy-meme.git
+* Browse to the folder just cloned down `giphy-meme`
+* Run `npm install` to install all package dependencies
+* Run `npm run dev` to start the app
 
 * **Note: requires a node version >= 7 and an npm version >= 4.**
 * **If you have installation or compilation issues with this project, please see [debugging guide](https://github.com/chentsulin/electron-react-boilerplate/issues/400)**
 
 ### Run - Dev Mode with Hot Module Replacement
-* ** In two seperate terminals run __simultaneously__:
+* In two seperate terminals run __simultaneously__:
 
 ```bash
 $ npm run dev
@@ -57,11 +57,12 @@ $ npm run build
 $ npm run test-e2e
 ```
 
-## Resources
-
+<!-- ## Resources
+Coming Soon
+-->
 
 ## Development Tools and Electron-React-Boilerplate
-This app is based on [Electron-React-Boilerplate](https://github.com/chentsulin/electron-react-boilerplate) which included many notable supporting packages like [![Flow](/internals/img/flow-padded-90.png)](https://flowtype.org/). A great intro into building react-based apps not just Electron. Great step-by-step guide too. See below for handy development tips:
+This app is based on [Electron-React-Boilerplate](https://github.com/chentsulin/electron-react-boilerplate) which included many notable supporting packages like [Flow](https://flowtype.org/). A great intro into building react-based apps not just Electron. Great step-by-step guide too. See below for handy development tips:
 
 
 ## Editor Configuration
@@ -246,37 +247,6 @@ Then, use git to merge some latest commits:
 ```sh
 git pull upstream master
 ```
-
-## Maintainers
-
-- [C. T. Lin](https://github.com/chentsulin)
-- [Jhen-Jie Hong](https://github.com/jhen0409)
-- [Amila Welihinda](https://github.com/amilajack)
-
-
-
-## License
-MIT © [C. T. Lin](https://github.com/chentsulin)
-
-[npm-image]: https://img.shields.io/npm/v/electron-react-boilerplate.svg?style=flat-square
-[github-tag-image]: https://img.shields.io/github/tag/chentsulin/electron-react-boilerplate.svg
-[github-tag-url]: https://github.com/chentsulin/electron-react-boilerplate/releases/latest
-[travis-image]: https://travis-ci.org/chentsulin/electron-react-boilerplate.svg?branch=master
-[travis-url]: https://travis-ci.org/chentsulin/electron-react-boilerplate
-[appveyor-image]: https://ci.appveyor.com/api/projects/status/github/chentsulin/electron-react-boilerplate?svg=true
-[appveyor-url]: https://ci.appveyor.com/project/chentsulin/electron-react-boilerplate/branch/master
-[david_img]: https://img.shields.io/david/chentsulin/electron-react-boilerplate.svg
-[david_site]: https://david-dm.org/chentsulin/electron-react-boilerplate
-
-
-
-
-
-
-
-
-
-
 
 
 [![React](/internals/img/react-padded-90.png)](https://facebook.github.io/react/)
