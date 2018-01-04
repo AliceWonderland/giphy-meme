@@ -1,6 +1,6 @@
 # Giphy Meme Generator
 
-A React-Based Desktop App To Create Custom Memes. Search GIPHY for gifs of your choice, add custom text, and save your gif to share!
+A Desktop App Built in React To Create Custom Memes. Search GIPHY for gifs of your choice, add custom text, and save your gif to share!
 
 <br/>
 
@@ -9,11 +9,16 @@ A React-Based Desktop App To Create Custom Memes. Search GIPHY for gifs of your 
 ![Electron Boilerplate Demo](https://cloud.githubusercontent.com/assets/3382565/10557547/b1f07a4e-74e3-11e5-8d27-79ab6947d429.gif)
 
 ## Electron
-Built in [Electron](https://electronjs.org/) which allows you to build Desktop Applications using web-based technologies like React. Not only is Javascript now a server-side compatible language, it can be formally used to build Desktop Apps. 
+Built using [Electron](https://electronjs.org/) which allows you to build Desktop Applications using web-based technologies like React. Not only is Javascript now a server-side compatible language, it can be formally used to build Desktop Apps. 
 
 Some wonderful industry standard tools like [Atom Editor](https://atom.io/) are built on Electron. Both a robust code editor and completely customizable since the [source code](https://github.com/atom/atom) is also open source. How meta!
 
+This is an intro into building yourself a desktop app for use!
+
 See more Electron Apps and Utilities [here](https://electronjs.org/apps).
+
+## Other Technologies and Stack
+React, Redux, GIPHY APi
 
 ## Installation
 
