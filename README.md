@@ -5,9 +5,8 @@ A Desktop App built in React to Create Custom Memes. Search GIPHY for gifs of yo
 <br/>
 
 ## Screenshot
-[![GiphyMeme](https://github.com/AliceWonderland/giphy-meme/blob/master/resources/giphymeme.png =600x)](https://www.youtube.com/watch?v=iJyRLpqSOhs)
+[![GiphyMeme](https://github.com/AliceWonderland/giphy-meme/blob/master/resources/giphymeme.png)](https://www.youtube.com/watch?v=iJyRLpqSOhs)
 
-<img src="https://github.com/AliceWonderland/giphy-meme/blob/master/resources/giphymeme.png" alt="Giphy Meme" style="width: 600px;"/>
 
 Demo [[embed url=https://www.youtube.com/watch?v=iJyRLpqSOhs]]
 
