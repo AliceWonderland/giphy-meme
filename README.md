@@ -1,6 +1,6 @@
 # Giphy Meme Generator
 
-A Desktop App Built in React To Create Custom Memes. Search GIPHY for gifs of your choice, add custom text, and save your gif to share!
+A Desktop App built in React to Create Custom Memes. Search GIPHY for gifs of your choice, add custom text, and save your gif to share!
 
 <br/>
 
