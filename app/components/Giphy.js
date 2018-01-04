@@ -8,7 +8,7 @@ export default class Giphy extends Component {
   constructor(props){
     super(props);
     this.state = {
-      gifs:[]
+      search:'Search for... Puppies'
     };
     this.handleClick=this.handleClick.bind(this);
     this.handleChange=this.handleChange.bind(this);
@@ -21,14 +21,13 @@ export default class Giphy extends Component {
 
   }
 
-  handleChange(){
-    // console.log('clicked');
-    this.props.selectGif('tee');
+  handleChange(event){
+    this.setState({search:event.target.value});
   }
 
-  handleClick(){
-    // console.log('clicked');
-    this.props.selectGif('tee');
+  handleClick(event){
+    console.log('clicked',this.state.search);
+    this.props.fetchGifs(this.state.search);
   }
 
 
@@ -38,13 +37,6 @@ export default class Giphy extends Component {
     const result=this.props.gifs;
     const url=(this.props.location.pathname==='/giphystill')?'memestill':'meme';
 
-  //
-  //   const isLoggedIn = props.isLoggedIn;
-  //   if (isLoggedIn) {
-  //     return <UserGreeting />;
-  //   }
-  //   return <GuestGreeting />;
-  // }
 
     return (
       <div className="container">
@@ -58,15 +50,12 @@ export default class Giphy extends Component {
 
         <h1>GIPHY Meme Generator</h1>
 
-
-
-
         <div className="row">
           <div className="col-md-4">
             <div className="input-group">
-              <input type="text" className="form-control" placeholder="Search for... Puppies" />
+              <input type="text" className="form-control" placeholder="Search for... Puppies" onChange={this.handleChange} />
               <span className="input-group-btn">
-              <button className="btn btn-default" type="button">Go!</button>
+              <button className="btn btn-default" type="button" onClick={this.handleClick}>Go!</button>
             </span>
             </div>
           </div>
@@ -79,7 +68,7 @@ export default class Giphy extends Component {
             result.map((gif,ind) => {
               return (
 
-                <div key={gif.id}><Link to={`/${url}/${ind}`}><img src={gif.images.original.url} /></Link></div>
+                <div key={gif.id}><Link to={`/${url}/${ind}`} key={gif.id}><img src={gif.images.original.url} /></Link></div>
 
               );
             })
