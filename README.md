@@ -4,10 +4,10 @@ A Desktop App Built in React To Create Custom Memes. Search GIPHY for gifs of yo
 
 <br/>
 
-## Screenshot
 
-![Electron Boilerplate Demo](https://cloud.githubusercontent.com/assets/3382565/10557547/b1f07a4e-74e3-11e5-8d27-79ab6947d429.gif)
 
+
+<!-- ## Screenshot ![Electron Boilerplate Demo](https://cloud.githubusercontent.com/assets/3382565/10557547/b1f07a4e-74e3-11e5-8d27-79ab6947d429.gif) -->
 ## Electron
 Built using [Electron](https://electronjs.org/) which allows you to build Desktop Applications using web-based technologies like React. Not only is Javascript now a server-side compatible language, it can be formally used to build Desktop Apps. 
 
