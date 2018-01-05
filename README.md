@@ -46,7 +46,7 @@ $ npm run dev
 $ npm run start-renderer-dev
 $ npm run start-main-dev
 ```
-Refresh changes in real-time during development with [**hot-module-replacement**](https://webpack.js.org/guides/hmr-react/). Similar to Nodemon.
+Refreshes changes in real-time during development with [**hot-module-replacement**](https://webpack.js.org/guides/hmr-react/). Similar to Nodemon.
 
 ### Run - Without Packaging
 ```bash
