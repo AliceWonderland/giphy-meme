@@ -37,7 +37,7 @@ From Command Line Prompt (Terminal or Shell):
 * **If you have installation or compilation issues with this project, please see [debugging guide](https://github.com/chentsulin/electron-react-boilerplate/issues/400)**
 
 ### Run - Dev Mode with Hot Module Replacement
-* In two seperate terminals run __simultaneously__:
+In two seperate terminals, run __simultaneously__:
 
 ```bash
 $ npm run dev
