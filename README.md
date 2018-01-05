@@ -21,7 +21,7 @@ This is an intro into building yourself a desktop app for use!
 See more Electron Apps and Utilities [here](https://electronjs.org/apps).
 
 ## Other Technologies and Stack
-React, Redux, GIPHY APi
+React, Redux, Canvas, GIPHY API
 
 ## Installation
 
